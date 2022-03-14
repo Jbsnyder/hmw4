@@ -1,11 +1,12 @@
+<div class="container-fluid">
 <h1>New Place</h1>
 
 <%= form_with model: @place do |form| %>
-  <p>
-    <%= form.label "name" %>
-    <%= form.text_field "name" %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+  <div class="mb-3">
+    <%= form.label "name", class: "form-label" %>
+    <%= form.text_field "name",  class: "form-control" %>
+  </div>
+ <%= form.submit "Create", class: "btn btn-info" %>
+
 <% end %>
+</div>
