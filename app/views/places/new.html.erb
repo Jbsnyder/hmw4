@@ -1,6 +1,7 @@
 <div class="container-fluid">
 <h1>New Place</h1>
 
+<% if @current_user %>
 <%= form_with model: @place do |form| %>
   <div class="mb-3">
     <%= form.label "name", class: "form-label" %>
@@ -10,3 +11,6 @@
 
 <% end %>
 </div>
+<% else %>
+  You must first <a href="/sessions/new">login</a> to add a place.
+<% end %>
